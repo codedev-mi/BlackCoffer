@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Large binaries & downloaded packages
+Task2/elasticsearch-8.17.0/
+*.dll
+*.jar
+*.zip
+*.tar.gz
+*.exe
+
+# Testing
+/coverage
+
+# Next.js build output
+/.next/
+/out/
+
+# Production build outputs
+/build/
+/dist/
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local environment variables and secrets
+.env
+.env*.local
+.env.development
+.env.production
+.env.test
+*.env
+
+# IDE / Editor configuration
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

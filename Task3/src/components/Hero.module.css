@@ -1,0 +1,133 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 580px;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 4rem 0 3rem 0;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.85;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroHeading {
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.headingRow2 {
+  margin-top: 1.5rem;
+  padding-left: 5rem;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 480px;
+}
+
+.blueBar {
+  width: 70px;
+  height: 4px;
+  background-color: #0052ff;
+  border-radius: 2px;
+}
+
+.heroParagraph {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  font-weight: 400;
+}
+
+.ctaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 0.5rem;
+
+  &:hover .arrowBadge {
+    transform: translateX(4px);
+    background-color: #1d61ff;
+  }
+}
+
+.arrowBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background-color: #0052ff;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 1024px) {
+  .heroHeading {
+    font-size: 3rem;
+  }
+  .headingRow2 {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .heroHeading {
+    font-size: 2.4rem;
+  }
+  .headingRow2 {
+    padding-left: 0;
+    margin-top: 0.5rem;
+  }
+}

@@ -1,0 +1,66 @@
+const sampleOrders = [
+  { orderId: "ORD-1001", customer: "Amit Sharma", category: "Electronics", product: "MacBook Pro 16", amount: 195000, status: "Completed", region: "West", date: "2026-01-10" },
+  { orderId: "ORD-1002", customer: "Priya Patil", category: "Fashion", product: "Leather Boots", amount: 6500, status: "Pending", region: "South", date: "2026-01-14" },
+  { orderId: "ORD-1003", customer: "Rahul Verma", category: "Electronics", product: "Sony WH-1000XM5", amount: 28000, status: "Completed", region: "North", date: "2026-01-20" },
+  { orderId: "ORD-1004", customer: "Sneha Reddy", category: "Home & Kitchen", product: "Espresso Coffee Machine", amount: 34500, status: "Shipped", region: "South", date: "2026-01-25" },
+  { orderId: "ORD-1005", customer: "Vikram Malhotra", category: "Electronics", product: "Dell UltraSharp Monitor", amount: 45000, status: "Completed", region: "West", date: "2026-02-02" },
+  { orderId: "ORD-1006", customer: "Ananya Roy", category: "Beauty & Health", product: "Skincare Essentials Kit", amount: 4200, status: "Completed", region: "East", date: "2026-02-05" },
+  { orderId: "ORD-1007", customer: "Rohan Das", category: "Fashion", product: "Designer Denim Jacket", amount: 7800, status: "Cancelled", region: "East", date: "2026-02-11" },
+  { orderId: "ORD-1008", customer: "Kavita Gupta", category: "Home & Kitchen", product: "Air Purifier Pro", amount: 18500, status: "Completed", region: "North", date: "2026-02-14" },
+  { orderId: "ORD-1009", customer: "Siddharth Nair", category: "Sports", product: "Smart Fitness Treadmill", amount: 52000, status: "Shipped", region: "South", date: "2026-02-18" },
+  { orderId: "ORD-1010", customer: "Meera Joshi", category: "Electronics", product: "iPad Air M2", amount: 59000, status: "Completed", region: "West", date: "2026-02-22" },
+  
+  { orderId: "ORD-1011", customer: "Arjun Mehta", category: "Electronics", product: "Mechanical Gaming Keyboard", amount: 12500, status: "Completed", region: "North", date: "2026-03-01" },
+  { orderId: "ORD-1012", customer: "Pooja Banerjee", category: "Fashion", product: "Silk Saree", amount: 14500, status: "Completed", region: "East", date: "2026-03-04" },
+  { orderId: "ORD-1013", customer: "Karan Kapoor", category: "Sports", product: "Carbon Fiber Tennis Racket", amount: 16000, status: "Pending", region: "West", date: "2026-03-08" },
+  { orderId: "ORD-1014", customer: "Neha Saxena", category: "Beauty & Health", product: "Hair Care Serum Set", amount: 3200, status: "Completed", region: "North", date: "2026-03-12" },
+  { orderId: "ORD-1015", customer: "Aditya Singh", category: "Electronics", product: "Samsung Galaxy S24 Ultra", amount: 129000, status: "Completed", region: "North", date: "2026-03-15" },
+  { orderId: "ORD-1016", customer: "Tanvi Kulkarni", category: "Home & Kitchen", product: "Robotic Vacuum Cleaner", amount: 29900, status: "Shipped", region: "West", date: "2026-03-19" },
+  { orderId: "ORD-1017", customer: "Gaurav Sen", category: "Fashion", product: "Leather Travel Bag", amount: 8900, status: "Completed", region: "East", date: "2026-03-24" },
+  { orderId: "ORD-1018", customer: "Shweta Pillai", category: "Sports", product: "Adjustable Dumbbell Set", amount: 14000, status: "Cancelled", region: "South", date: "2026-03-28" },
+  
+  { orderId: "ORD-1019", customer: "Varun Bhat", category: "Electronics", product: "LG OLED Smart TV 55\"", amount: 115000, status: "Completed", region: "West", date: "2026-04-02" },
+  { orderId: "ORD-1020", customer: "Ritu Choudhury", category: "Home & Kitchen", product: "Smart Microwave Oven", amount: 16500, status: "Completed", region: "East", date: "2026-04-06" },
+  { orderId: "ORD-1021", customer: "Nikhil Rao", category: "Fashion", product: "Italian Leather Sneakers", amount: 11200, status: "Shipped", region: "South", date: "2026-04-10" },
+  { orderId: "ORD-1022", customer: "Divya Agarwal", category: "Beauty & Health", product: "Electric Toothbrush Pro", amount: 5500, status: "Completed", region: "North", date: "2026-04-15" },
+  { orderId: "ORD-1023", customer: "Manish Pandey", category: "Electronics", product: "Bose Soundbar 700", amount: 68000, status: "Pending", region: "North", date: "2026-04-19" },
+  { orderId: "ORD-1024", customer: "Deepika Rao", category: "Sports", product: "GPS Smartwatch", amount: 24500, status: "Completed", region: "South", date: "2026-04-23" },
+  { orderId: "ORD-1025", customer: "Alok Dave", category: "Home & Kitchen", product: "Ergonomic Office Chair", amount: 22000, status: "Completed", region: "West", date: "2026-04-28" },
+  
+  { orderId: "ORD-1026", customer: "Sanjay Dixit", category: "Electronics", product: "Canon EOS R6 Camera", amount: 215000, status: "Completed", region: "North", date: "2026-05-03" },
+  { orderId: "ORD-1027", customer: "Bhavna Mishra", category: "Fashion", product: "Casual Cotton Shirts 3x", amount: 3500, status: "Completed", region: "Central", date: "2026-05-07" },
+  { orderId: "ORD-1028", customer: "Rajesh Kumar", category: "Home & Kitchen", product: "Dishwasher 14 Place", amount: 42000, status: "Shipped", region: "North", date: "2026-05-12" },
+  { orderId: "ORD-1029", customer: "Swati Deshmukh", category: "Sports", product: "Mountain Bike Pro 29T", amount: 38500, status: "Completed", region: "West", date: "2026-05-17" },
+  { orderId: "ORD-1030", customer: "Harsh Vardhan", category: "Electronics", product: "Asus ROG Gaming Laptop", amount: 145000, status: "Completed", region: "West", date: "2026-05-22" },
+  { orderId: "ORD-1031", customer: "Nidhi Tripathi", category: "Beauty & Health", product: "Organic Essential Oils Set", amount: 2800, status: "Completed", region: "Central", date: "2026-05-27" },
+  
+  { orderId: "ORD-1032", customer: "Tarun Bajaj", category: "Electronics", product: "Apple Watch Series 9", amount: 41900, status: "Completed", region: "North", date: "2026-06-02" },
+  { orderId: "ORD-1033", customer: "Ishita Shah", category: "Fashion", product: "Winter Woolen Coat", amount: 9500, status: "Pending", region: "West", date: "2026-06-06" },
+  { orderId: "ORD-1034", customer: "Pradeep Hegde", category: "Home & Kitchen", product: "Water Purifier RO+UV", amount: 17800, status: "Completed", region: "South", date: "2026-06-10" },
+  { orderId: "ORD-1035", customer: "Sunita Menon", category: "Sports", product: "Yoga & Pilates Kit", amount: 3900, status: "Completed", region: "South", date: "2026-06-15" },
+  { orderId: "ORD-1036", customer: "Akash Solanki", category: "Electronics", product: "Logitech MX Master 3S", amount: 9900, status: "Shipped", region: "West", date: "2026-06-20" },
+  { orderId: "ORD-1037", customer: "Richa Saxena", category: "Beauty & Health", product: "Professional Hair Dryer", amount: 12500, status: "Completed", region: "North", date: "2026-06-26" },
+  
+  { orderId: "ORD-1038", customer: "Venkatesh Iyer", category: "Electronics", product: "Samsung Smart Monitor M8", amount: 48000, status: "Completed", region: "South", date: "2026-07-01" },
+  { orderId: "ORD-1039", customer: "Komal Chawla", category: "Fashion", product: "Formal Suit Set", amount: 18500, status: "Completed", region: "North", date: "2026-07-05" },
+  { orderId: "ORD-1040", customer: "Dinesh Kulkarni", category: "Home & Kitchen", product: "Air Fryer XL 6L", amount: 9200, status: "Completed", region: "West", date: "2026-07-11" },
+  { orderId: "ORD-1041", customer: "Aarti Thakur", category: "Sports", product: "Camping Tent 4-Person", amount: 12000, status: "Cancelled", region: "North", date: "2026-07-16" },
+  { orderId: "ORD-1042", customer: "Madhavan Unni", category: "Electronics", product: "GoPro Hero 12 Black", amount: 39500, status: "Shipped", region: "South", date: "2026-07-22" },
+  { orderId: "ORD-1043", customer: "Pallavi Sood", category: "Beauty & Health", product: "Facial Massager Roller", amount: 2400, status: "Completed", region: "Central", date: "2026-07-28" },
+  
+  { orderId: "ORD-1044", customer: "Yashwant Sinha", category: "Electronics", product: "Bose QuietComfort 45", amount: 26900, status: "Completed", region: "North", date: "2026-08-02" },
+  { orderId: "ORD-1045", customer: "Sonali Seth", category: "Fashion", product: "Leather Crossbody Bag", amount: 5400, status: "Completed", region: "East", date: "2026-08-08" },
+  { orderId: "ORD-1046", customer: "Chetan Bhagat", category: "Home & Kitchen", product: "Stand Mixer 1000W", amount: 21000, status: "Pending", region: "West", date: "2026-08-14" },
+  { orderId: "ORD-1047", customer: "Lata Krishnan", category: "Sports", product: "Smart Jump Rope", amount: 2100, status: "Completed", region: "South", date: "2026-08-19" },
+  { orderId: "ORD-1048", customer: "Girish Murthy", category: "Electronics", product: "Kindle Paperwhite 16GB", amount: 14900, status: "Completed", region: "South", date: "2026-08-25" },
+  { orderId: "ORD-1049", customer: "Radhika Merchant", category: "Beauty & Health", product: "Luxury Perfume 100ml", amount: 15800, status: "Shipped", region: "West", date: "2026-08-29" },
+  
+  { orderId: "ORD-1050", customer: "Mayank Trivedi", category: "Electronics", product: "PlayStation 5 Slim", amount: 54900, status: "Completed", region: "North", date: "2026-09-02" },
+  { orderId: "ORD-1051", customer: "Ankita Bhalla", category: "Fashion", product: "Running Shoes Ultra", amount: 8200, status: "Completed", region: "North", date: "2026-09-05" },
+  { orderId: "ORD-1052", customer: "Subhash Bose", category: "Home & Kitchen", product: "Induction Cooktop 2100W", amount: 4100, status: "Completed", region: "East", date: "2026-09-10" },
+  { orderId: "ORD-1053", customer: "Vandana Sharma", category: "Sports", product: "Rowing Machine", amount: 46000, status: "Pending", region: "West", date: "2026-09-15" },
+  { orderId: "ORD-1054", customer: "Sameer Joshi", category: "Electronics", product: "Nvidia RTX 4070 Super", amount: 62000, status: "Completed", region: "West", date: "2026-09-20" },
+  { orderId: "ORD-1055", customer: "Brijesh Patel", category: "Beauty & Health", product: "Electric Shaver Series 9", amount: 16500, status: "Completed", region: "West", date: "2026-09-26" }
+];
+
+module.exports = sampleOrders;
